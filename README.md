@@ -1,6 +1,6 @@
-# NeoPixel RESTfull node app
+# NeoPixel RESTful node app
 
-NeoPixel RESTfull node app provides a RESTful interface to the neopixel driver for the Raspberry Pi.
+NeoPixel RESTful node app provides a RESTful interface to the neopixel driver for the Raspberry Pi.
 
 ## Hardware Requirements
 
