@@ -21,7 +21,13 @@ app.get('/', function (req, res) {
 
 app.get('/strings', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({ strings: 1 }));
+  res.send(JSON.stringify({ strings: [1, 2] }));
+});
+
+app.get('/strings/:id', function (req, res) {
+  var id = req.params.id    // id is currently unused (i2c function not implemented yet)
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ string_id: id, number_of_pixels: "8" }));
 });
 
 app.post('/strings/:id', function (req, res) {
