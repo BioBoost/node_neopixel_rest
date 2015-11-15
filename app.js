@@ -1,5 +1,10 @@
 var express = require('express');
+var bodyParser = require("body-parser");
 var app = express();
+
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.json());   // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true }));   // for parsing application/x-www-form-urlencoded
 
 // Set port
 app.set('port', process.env.PORT || 3000);
@@ -17,6 +22,18 @@ app.get('/', function (req, res) {
 app.get('/strings', function (req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({ strings: 1 }));
+});
+
+app.post('/strings/:id', function (req, res) {
+  var id = req.params.id    // id is currently unused (i2c function not implemented yet)
+  var red = req.body.color[0];
+  var green = req.body.color[1];
+  var blue = req.body.color[2];
+  console.log(req.body);
+  console.log('Setting color for string ' + id + ' to ' + red + ' ' + green + ' ' + blue);
+
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ status: "success" }));
 });
 
 // Custom 404 (needs to be last in line of routes)
