@@ -1,0 +1,31 @@
+{
+  "name": "node_neopixel_rest",
+  "version": "0.1.0-alpha",
+  "description": "NeoPixel RESTful node app provides a RESTful interface to the neopixel driver for the Raspberry Pi.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioBoost/node_neopixel_rest.git"
+  },
+  "keywords": [
+    "neopixel",
+    "rest",
+    "api",
+    "raspberry",
+    "pi"
+  ],
+  "author": "Nico De Witte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BioBoost/node_neopixel_rest/issues"
+  },
+  "homepage": "https://github.com/BioBoost/node_neopixel_rest#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "node-i2c": "git+https://github.com/kelly/node-i2c.git"
+  }
+}
